@@ -66,3 +66,10 @@ complex complex::sub(complex x)
     return ans;
 }
 
+complex complex::mult(complex x)
+{
+    complex ans;
+    ans.re = re * x.re - im * x.im;
+    ans.im = re * x.im + im * x.re;
+    return ans;
+}
