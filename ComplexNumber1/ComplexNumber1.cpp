@@ -8,7 +8,7 @@ struct complex
     void complexInput();
     void complexOutput();
 
-    bool isEqual();
+    bool isEqual(complex);
     double mod();
     complex sum(complex);
     complex sub(complex);
@@ -39,5 +39,10 @@ void complex::complexInput()
 
 void complex::complexOutput()
 {
-    cout << re << " + " << im;
+    cout << re << " + " << im << "i";
+}
+
+bool complex::isEqual(complex x)
+{
+
 }
