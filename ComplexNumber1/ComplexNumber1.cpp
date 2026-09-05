@@ -1,4 +1,5 @@
 ﻿#include <iostream>
+#include <cmath>
 using namespace std;
 
 struct complex
@@ -47,6 +48,12 @@ bool complex::isEqual(complex x)
     if (re == x.re && im == x.im)
     {
         return true;
+        sqrt(12);
     }
     return false;
+}
+
+double complex::mod()
+{
+    return sqrt(re*re + im*im);
 }
