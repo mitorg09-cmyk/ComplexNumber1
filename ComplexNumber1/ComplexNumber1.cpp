@@ -44,5 +44,9 @@ void complex::complexOutput()
 
 bool complex::isEqual(complex x)
 {
-
+    if (re == x.re && im == x.im)
+    {
+        return true;
+    }
+    return false;
 }
