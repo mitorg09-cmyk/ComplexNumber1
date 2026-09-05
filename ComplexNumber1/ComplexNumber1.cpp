@@ -57,3 +57,12 @@ double complex::mod()
 {
     return sqrt(re*re + im*im);
 }
+
+complex complex::sub(complex x)
+{
+    complex ans;
+    ans.re = re - x.re;
+    ans.im = im - x.im;
+    return ans;
+}
+
