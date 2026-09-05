@@ -73,3 +73,9 @@ complex complex::mult(complex x)
     ans.im = re * x.im + im * x.re;
     return ans;
 }
+
+complex complex::div(complex x)
+{
+    complex ans;
+    ans.re = (re * x.re + im * x.im)    
+}
