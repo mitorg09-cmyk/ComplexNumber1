@@ -19,7 +19,27 @@ struct complex
 
 int main()
 {
+    complex forTestComplex, forTestComplex_2;
     
+    forTestComplex.complexInput();
+    forTestComplex_2.complexInput();
+    forTestComplex.complexOutput();
+    forTestComplex_2.complexOutput();
+
+    cout << forTestComplex.isEqual(forTestComplex_2) << "\n";
+    cout << forTestComplex.mod() << "\n";
+    
+    forTestComplex = forTestComplex.sum(forTestComplex_2);
+    forTestComplex.complexOutput();
+
+    forTestComplex = forTestComplex.sub(forTestComplex_2);
+    forTestComplex.complexOutput();
+
+    forTestComplex = forTestComplex.mult(forTestComplex_2);
+    forTestComplex.complexOutput();
+
+    forTestComplex = forTestComplex.div(forTestComplex_2);
+    forTestComplex.complexOutput();
 }
 
 complex complex::sum(complex x)
@@ -40,7 +60,14 @@ void complex::complexInput()
 
 void complex::complexOutput()
 {
-    cout << re << " + " << im << "i";
+    if (im >= 0)
+    {
+        cout << re << " + " << im << "i\n";
+    }
+    else
+    {
+        cout << re << " - " << fabs(im) << "i\n";
+    }
 }
 
 bool complex::isEqual(complex x)
