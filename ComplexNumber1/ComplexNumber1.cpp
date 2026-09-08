@@ -48,7 +48,6 @@ bool complex::isEqual(complex x)
     if (re == x.re && im == x.im)
     {
         return true;
-        sqrt(12);
     }
     return false;
 }
@@ -77,5 +76,8 @@ complex complex::mult(complex x)
 complex complex::div(complex x)
 {
     complex ans;
-    ans.re = (re * x.re + im * x.im)    
+    double denom = x.re * x.re + x.im * x.im;
+    ans.re = (re * x.re + im * x.im) / denom;
+    ans.im = (im * x.re - re * x.im) / denom;
+    return ans;
 }
