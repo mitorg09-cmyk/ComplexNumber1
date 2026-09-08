@@ -76,8 +76,11 @@ complex complex::mult(complex x)
 complex complex::div(complex x)
 {
     complex ans;
+    if (!x.re && !x.im) exit;
+
     double denom = x.re * x.re + x.im * x.im;
     ans.re = (re * x.re + im * x.im) / denom;
     ans.im = (im * x.re - re * x.im) / denom;
+
     return ans;
 }
